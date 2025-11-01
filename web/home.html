@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Montfort Brothers Uganda">
-        <title>Montfort Brothers Uganda</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <nav>
-            <div class="navleft">
-                <img src="images/logo.png" alt="Montfort Brothers Logo" width="100" height="100">
-                <p>Montfort Brothers</p>
-            </div>
-            <div class="navright">
-                <a href="home.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="programs.html">Programs</a>
-                <a href="contact.html">Contact</a>
-        </nav>
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Montfort Brothers Uganda</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <div class="navleft">
+      <img src="images/logo.png" alt="Logo" />
+      <p>Montfort Brothers</p>
+    </div>
+
+    <div class="nav-controls">
+      <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</button>
+      <div class="navright" id="navlinks">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="whereweare.html">Where we are</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="unite.html">Unite</a>
+        <a href="support.html">Support Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navlinks");
+      const toggleBtn = document.getElementById("menuToggle");
+      nav.classList.toggle("active");
+      toggleBtn.textContent = nav.classList.contains("active") ? "✖" : "☰";
+    }
+  </script>
+</body>
 </html>

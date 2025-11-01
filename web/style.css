@@ -1,36 +1,101 @@
-body{
-    margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: azure;
+body {
+  margin: 0;
+  font-family: 'Lucida Sans', sans-serif;
+  background-color: azure;
 }
-nav{
+
+nav {
+  background-color: darkblue;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navleft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navleft img {
+  height: 40px;
+}
+
+.navleft p {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.nav-controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.navright {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navright a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navright a:hover {
+  color: #ffda5e;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navright {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    min-width: 180px;
+    z-index: 1000;
+  }
+
+  .navright.active {
+    display: flex;
+  }
+
+  .navright a {
+    color: darkblue;
+    padding: 8px 12px;
+    width: 100%;
+  }
+
+  .navright a:hover {
     background-color: darkblue;
-    color: white;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-nav .navleft{
-    display: flex;
-    margin-left: 10px;
-}
-.navleft img{
-    height: 40px;
-    margin-right: 10px;
-}
-.navleft p{
-    font-size: 30px;
-    font-weight: bold;
-    margin: 0;
-}
-nav .navright{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-}
-nav .navright a{
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
+    color: #ffda5e;
+  }
 }
