@@ -28,13 +28,70 @@
       </div>
     </div>
   </nav>
-  <main>
-    <section class="hero">
-      <div class="text">
-        <h1>Welcome to Montfort Brothers Uganda</h1>
-        <p>Your journey with us begins here.</p>
+  <main>     
+      <div class="slideshow-container">
+        <div class="slide fade">
+          <div class="image-wrapper">
+            <img src="Images/campus2.png" alt="Campus View" />
+            <div class="overlay"></div>
+          </div>
+          <div class="motto-overlay">Motto: Unite for Peace</div>
+          <div class="text">
+            <h1>Welcome to Montfort Brothers Uganda</h1>
+            <p>Your journey with us begins here.</p>
+          </div>
+        </div>
+
+        <div class="slide fade">
+          <div class="image-wrapper">
+            <img src="Images/prayer.png" alt="Prayer Gathering" />
+            <div class="overlay"></div>
+          </div>
+          <div class="motto-overlay">Motto: Unite for Peace</div>
+          <div class="text">
+            <h1>Faith in Action</h1>
+            <p>United in prayer and purpose.</p>
+          </div>
+        </div>
+
+        <div class="slide fade">
+          <div class="image-wrapper">
+            <img src="Images/class.png" alt="Classroom Learning" />
+            <div class="overlay"></div>
+          </div>
+          <div class="motto-overlay">Motto: Unite for Peace</div>
+          <div class="text">
+            <h1>Inspired Learning</h1>
+            <p>Guided by values and excellence.</p>
+          </div>
+        </div>
+
+        <div class="slide fade">
+          <div class="image-wrapper">
+            <img src="Images/library.png" alt="Student Life" />
+            <div class="overlay"></div>
+          </div>
+          <div class="motto-overlay">Motto: Unite for Peace</div>
+          <div class="text">
+            <h1>Growing Together</h1>
+            <p>Friendship, joy, and discovery.</p>
+          </div>
+        </div>
+
+        <div class="slide fade">
+          <div class="image-wrapper">
+            <img src="Images/campus1.png" alt="Community Outreach" />
+            <div class="overlay"></div>
+          </div>
+          <div class="motto-overlay">Motto: Unite for Peace</div>
+          <div class="text">
+            <h1>Serving with Love</h1>
+            <p>Making a difference beyond the classroom.</p>
+          </div>
+        </div>
       </div>
     </section>
+
     <section class="content">
       <h2>About Us</h2>
       <p>
@@ -44,6 +101,7 @@
       </p>
       <a href="about.html" class="btn">Learn More</a>
     </section>
+
     <section class="content">
       <h2>Where We Are</h2>
       <p>
@@ -52,6 +110,7 @@
       </p>
       <a href="whereweare.html" class="btn">Find Out More</a>
     </section>
+
     <section class="content"> 
       <h2>Join Our Community</h2>
       <p>
@@ -60,6 +119,7 @@
       </p>
       <a href="unite.html" class="btn">Join Now</a> 
     </section>
+
     <section class="content">
       <h2>Support Us</h2>
       <p>
@@ -68,17 +128,32 @@
       </p>
       <a href="support.html" class="btn">Support Us</a>
     </section>
+
     <footer>
       <p>&copy; 2025 Montfort Brothers of St. Gabriel: Uganda. All rights reserved.</p>
     </footer>
   </main>
-  </main>
+
   <script>
     function toggleMenu() {
       const nav = document.getElementById("navlinks");
       const toggleBtn = document.getElementById("menuToggle");
       nav.classList.toggle("active");
       toggleBtn.textContent = nav.classList.contains("active") ? "✖" : "☰";
+    }
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      const slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 5000); // Change image every 5 seconds
     }
   </script>
 </body>

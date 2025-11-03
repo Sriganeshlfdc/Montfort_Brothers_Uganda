@@ -1,4 +1,8 @@
 /* Base styles */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Lucida Sans', sans-serif;
@@ -17,6 +21,7 @@ nav {
   width: 100%;
   top: 0;
   z-index: 1000;
+  margin: 0;
 }
 
 .navleft {
@@ -52,7 +57,7 @@ nav {
   position: relative;
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .navright {
@@ -69,7 +74,8 @@ nav {
 }
 
 .navright a:hover {
-  color: #ffda5e;
+  color: #ffd95ee3;
+  font-size: 16px;
 }
 
 .menu-toggle {
@@ -81,29 +87,112 @@ nav {
   cursor: pointer;
   z-index: 1100;
 }
-
 main {
-  padding-top: 100px;
+  padding: 0;
   margin: 0;
 }
-
 .hero {
   background-color: #fffec680;
   text-align: center;
   margin: 0;
   color: darkblue;
-  padding: 100px 20px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
 }
 
-.hero .text h1 {
-  font-size: 60px;
-  font-weight: bold;
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(70%) contrast(80%) saturate(60%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.281);
+  z-index: 1;
+}
+.motto-overlay {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  padding: 8px 16px;
+  font-size: 30px;
+  font-weight: bolder;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  border: #ffda5e 3px solid;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgb(0, 0, 0);
+}
+
+.slide .text {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  z-index: 2;
+  color: #fff;
+  padding: 25px 30px;
+  max-width: 1000px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.slide .text h1 {
+  font-size: 80px;
+  font-weight: 700;
   margin-bottom: 10px;
+  color: #ffda5e;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+
 }
 
-.hero .text p {
-  font-size: 20px;
-  font-weight: bold;
+.slide .text p {
+  font-size: 28px;
+  font-weight: 500;
+  color: #f0f0f0;
+  margin: 0;
+}
+
+.fade {
+  animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0.4}
+  to {opacity: 1}
 }
 
 .content {
@@ -181,6 +270,22 @@ footer {
   .navright a:hover {
     background-color: #f0f0f0;
     color: #ffda5e;
+  }
+
+  .slide .text {
+    left: 20px;
+    bottom: 30px;
+    max-width: 90%;
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .slide .text h1 {
+    font-size: 28px;
+  }
+
+  .slide .text p {
+    font-size: 14px;
   }
 
   .hero .text h1 {
