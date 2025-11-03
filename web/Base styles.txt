@@ -5,12 +5,12 @@
 
 body {
   margin: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Lucida Sans', sans-serif;
   background-color: azure;
 }
 
 nav {
-  background: linear-gradient(135deg, #021a3f, #003366);
+  background-color: darkblue;
   color: white;
   padding: 10px 20px;
   display: flex;
@@ -73,7 +73,7 @@ nav {
 }
 
 .navright a:hover {
-  color: #ffc400;
+  color: #ffd95ee3;
   font-size: 16px;
 }
 
@@ -242,7 +242,7 @@ main {
 .about-grid {
   padding: 40px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #021a3f, #003366);
+  background-color: darkblue;
 }
 
 .about-columns {
