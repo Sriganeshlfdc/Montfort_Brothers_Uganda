@@ -3,22 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us</title>
+  <title>About Us – Montfort Brothers Uganda</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav>
     <div class="navleft">
-      <img src="logo.png" />
+      <img src="logo.png" alt="Logo" />
       <div class="title-group">
         <p>Montfort Brothers</p>
         <span class="subtitle">of St. Gabriel: Uganda</span>
       </div>
     </div>
-    </div>
-
     <div class="nav-controls">
-      <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
       <div class="navright" id="navlinks">
         <a href="home.html">Home</a>
         <a href="about.html">About Us</a>
@@ -30,13 +28,85 @@
     </div>
   </nav>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("navlinks");
-      const toggleBtn = document.getElementById("menuToggle");
-      nav.classList.toggle("active");
-      toggleBtn.textContent = nav.classList.contains("active") ? "✖" : "☰";
-    }
-  </script>
+  <main>
+    <section class="hero-section">
+      <div class="hero-image">
+        <img src="Images/campus1.png" alt="Montfort Brothers Uganda" />
+        <div class="overlay"></div>
+        <div class="hero-text">
+          <h1>About Montfort Brothers Uganda</h1>
+          <p>Rooted in faith. United in service. Empowering through education.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content mission-section scroll-animate">
+      <h2 class="section-title">Our Mission</h2>
+      <p class="section-subtitle">To nurture compassionate leaders through holistic education, spiritual formation, and outreach to the marginalized.</p>
+      <div class="mission-columns">
+        <div class="mission-box">
+          <h3>Faith & Formation</h3>
+          <p>We guide young hearts through prayer, reflection, and the legacy of St. Louis de Montfort.</p>
+        </div>
+        <div class="mission-box">
+          <h3>Education & Empowerment</h3>
+          <p>Our schools foster excellence, creativity, and lifelong learning rooted in values.</p>
+        </div>
+        <div class="mission-box">
+          <h3>Service & Outreach</h3>
+          <p>We serve communities with love — from pastoral care to youth mentorship and social action.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content heritage-section scroll-animate">
+      <h2 class="section-title">Our Heritage</h2>
+      <p class="section-subtitle">Inspired by the life and teachings of St. Louis-Marie Grignion de Montfort.</p>
+      <div class="heritage-grid">
+        <div class="heritage-card">
+          <img src="Images/st-montfort.jpg" alt="St. Montfort" />
+          <h3>St. Montfort’s Legacy</h3>
+          <p>His motto “God Alone” continues to guide our Brothers in faith, humility, and service.</p>
+        </div>
+        <div class="heritage-card">
+          <img src="Images/uganda-map.jpg" alt="Uganda Map" />
+          <h3>Our Journey in Uganda</h3>
+          <p>From Mbarara to Mpala, our presence grows through education, formation, and community engagement.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content values-section scroll-animate">
+      <h2 class="section-title">Core Values</h2>
+      <ul class="values-list">
+        <li><strong>Faith:</strong> Anchored in prayer and spiritual growth</li>
+        <li><strong>Unity:</strong> Living our motto “Unite for Peace” in every action</li>
+        <li><strong>Compassion:</strong> Serving with love and dignity</li>
+        <li><strong>Excellence:</strong> Pursuing knowledge and creativity</li>
+        <li><strong>Community:</strong> Building bridges across cultures and generations</li>
+      </ul>
+    </section>
+
+    <section class="content call-to-action scroll-animate">
+      <h2 class="section-title">Join Our Mission</h2>
+      <p class="section-subtitle">Whether through prayer, partnership, or presence — you are part of our story.</p>
+      <div class="cta-buttons">
+        <a href="unite.html" class="btn">Unite for Peace</a>
+        <a href="support.html" class="btn ghost">Support Our Work</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+  <div class="footer-inner">
+    <p>&copy; 2025 Montfort Brothers of St. Gabriel. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
