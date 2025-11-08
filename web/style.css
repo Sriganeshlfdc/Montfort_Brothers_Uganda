@@ -323,7 +323,7 @@ main{
   margin-top: 0;
 }
 
-.about-grid {
+.about-grid, .specialties-list {
   padding: 40px 20px;
   text-align: center;
   margin-top: 15px;
