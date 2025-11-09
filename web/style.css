@@ -294,7 +294,7 @@ main{
 }
 .section-title {
   color: #fdc50e;
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 700;
   margin-bottom: 10px;
   letter-spacing: 1px;
@@ -309,7 +309,7 @@ main{
 }
 .sectiontitle {
   color: #021a3f;
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 700;
   margin-bottom: 10px;
   letter-spacing: 1px;
@@ -374,7 +374,7 @@ main{
 }
 .location-box{
   background-color: #ddd;
-  border: #ffba0c 4px solid;
+  border: #021a3f 4px solid;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
@@ -410,6 +410,26 @@ main{
 .about-box:hover , 
 .location-box:hover {
   transform: translateY(-8px);
+}
+.specialties-list{
+  background: linear-gradient(135deg, #021a3f, #003366);
+  padding: 40px 20px;
+  margin-top: 20px;
+}
+.specialty-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.specialty-card {
+  background-color: white;
+  border-left: #ffba0c 6px solid;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
 }
 /* Responsive */
 @media (max-width:699px) {
