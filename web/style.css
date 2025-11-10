@@ -627,6 +627,7 @@ main{
 }
 .contact-section{
   background: linear-gradient(180deg,#021a3f 0% ,#003366 60%);
+  display: grid;
   color: #eaf4ff;
   padding: 48px 20px;
   border-radius: 14px;
@@ -636,7 +637,7 @@ main{
 }
 .contact-container {
   display: grid;
-  grid-template-columns: 1fr  480px;
+  grid-template-columns: 1fr 1fr;
   gap: 28px;
   max-width: 1100px;
   margin: 0 auto;
@@ -694,6 +695,7 @@ main{
   flex-wrap: wrap;
 }
 .contact-form{
+  display: grid;
   padding: 20px;
   background: linear-gradient(180deg,rgba(255,255,255,0.03,),rgba(255,255,255,0.02));
   border-radius: 12px;
@@ -875,6 +877,10 @@ input:focus,textarea:focus,a:focus ,button:focus{
   .overlay-text p, .guiding-message{
     margin-top: 2px;
     font-size: 10px;
+  }
+  .contact-container{
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (min-width: 700px) and (max-width: 950px) {

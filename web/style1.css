@@ -1180,7 +1180,9 @@ footer{
     text-decoration:underline; }
 
 /* small interaction & accessibility */
-input:focus, textarea:focus, a:focus, button:focus{ outline: 3px solid rgba(255,217,94,0.14); outline-offset:2px; }
+input:focus, textarea:focus, a:focus, button:focus{ 
+  outline: 3px solid rgba(255,217,94,0.14); 
+  outline-offset:2px; }
 
 /* reduce motion */
 @media (prefers-reduced-motion: reduce){
