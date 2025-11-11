@@ -423,10 +423,7 @@ main{
   justify-content: center;
 }
 .images-special {
-  display: grid;
-  flex-direction: column;
   width: 100%;
-  padding: 20px; 
   align-content: center;
   margin: 0;
   margin-top: 10px ;
@@ -759,7 +756,7 @@ input:focus,textarea:focus,a:focus ,button:focus{
   outline-offset: 2px;
 }
 /* Responsive */
-@media (max-width:699px) {
+@media (max-width:599px) {
   *,*::before, *::after {
     box-sizing: inherit;
   }
@@ -828,6 +825,12 @@ input:focus,textarea:focus,a:focus ,button:focus{
     margin-left: 1px;
     font-weight: 100;
   }
+  .section-title , .sectiontitle , .support-card > h2{
+    font-size: 36px;
+  }
+  .section-subtitle , .sectionsubtitle , .support-card .section-subtitle{
+    font-size: 12px;
+  }
   .inspiration-card{
     flex: 1 1 100%;
     margin-top:15px ;
@@ -836,39 +839,23 @@ input:focus,textarea:focus,a:focus ,button:focus{
     flex-direction: column;
   }
   .inspiration-card:nth-child(2){
-    flex: 1 1 100%;
-    justify-content: center;
-    align-content: center;
-  }
-  .inspiration-card:nth-child(2) .image-container{
-    width: 100%;
-    padding: 0;
-    top: 0;
-    margin-top: -80px;
-  }
-  .montfortimg {
-    width: 100%;
-    scale: 0.7;
-    padding: 0;
-    top:0;
+  flex: 1 1 100px;
   }
   .montfort-text{
-    top: 0;
-    margin: 0;
-    margin-top: -80px;
+    top: 0
   }
   .overlay-title{
-    font-size: 30px;
+    font-size: 24px;
     top: 2px;
     left: 3px;
   }
   .overlay-middle {
     top:25%;
-    font-size: 24px;
+    font-size: 18px;
   }
   .overlay-text {
     bottom: 0;
-    padding: 10px;
+    padding: 5px;
   }
   .overlay-text h3{
     font-size: 18px;
@@ -878,12 +865,37 @@ input:focus,textarea:focus,a:focus ,button:focus{
     margin-top: 2px;
     font-size: 10px;
   }
+  .special-columns{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .images-special{
+    display: flex;
+    flex: 1 1 100%;
+    width: 100%;
+    justify-content: center;
+    gap: 5px;
+  }
+  .images-special img{
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+  .specialty-items .details h3 {
+    font-size: 24px;
+  }
+  .specialty-items .details p{
+    font-size: 12px;
+  }
   .contact-container{
     display: flex;
     flex-direction: column;
   }
+  .support-grid {
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+
+  }
 }
-@media (min-width: 700px) and (max-width: 950px) {
+@media (min-width: 600px) and (max-width: 1200px) {
   .title-group p{
     font-size: 26px;
   }
@@ -927,4 +939,33 @@ input:focus,textarea:focus,a:focus ,button:focus{
     margin-left: 10px;
     font-weight: 100;
   }
+  .inspiration-card:nth-child(2){
+  flex: 1 1 100px;
+  
+}
+.montfort-text {
+  border-radius: 10px;
+}
+.montfort-text h3 {
+  font-size: 14px;
+}
+.montfort-text p{
+  font-size: 8px;
+}
+.overlay-title{
+  font-size: 20px;
+}
+.overlay-middle{
+  font-size: 15px;
+  top: 30%;
+}
+.overlay-text h3{
+  font-size: 18px;
+}
+.overlay-text p{
+  font-size: 8px;
+}
+.overlay-text {
+  padding: 5px;
+}
 }
